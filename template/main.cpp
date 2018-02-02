@@ -12,7 +12,7 @@ T printStuff(T v){
 
 template<typename Tfirst, typename... Trest>
 Tfirst printStuff(Tfirst first, Trest ... rests){
-   std::cout<<"From Main"<<std::endl;
+   std::cout<<"Count of arguements "<<sizeof...(rests)<<std::endl;
     return first+printStuff(rests...);
 }
 /*
