@@ -5,15 +5,15 @@
  */
 #include <iostream>
 template<typename T>
-T printStuff(T v){
+T sum(T v){
     std::cout<<"from base"<<std::endl;
     return v;
 }
 
 template<typename Tfirst, typename... Trest>
-Tfirst printStuff(Tfirst first, Trest ... rests){
+Tfirst sum(Tfirst first, Trest ... rests){
    std::cout<<"Count of arguements "<<sizeof...(rests)<<std::endl;
-    return first+printStuff(rests...);
+    return first+sum(rests...);
 }
 /*
 template<typename Tfirst>
@@ -24,7 +24,7 @@ Tfirst printThings(){
 */
 int main()
 {
-    std::cout<<printStuff(3,4,10,4.5)<<std::endl;
+    std::cout<<sum(3,4,10,4.5)<<std::endl;
 
     return 0;
 }
