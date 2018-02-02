@@ -3,7 +3,6 @@
  * Feb 02/2018
  *
  */
-
 #include <iostream>
 template<typename T>
 T printStuff(T v){
